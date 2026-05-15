@@ -4,11 +4,10 @@
  */
 package packagee;
 
-import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.Color;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
-import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -525,6 +524,11 @@ public class NewJFrame111 extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jButton4.setText("Accept");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1267,6 +1271,19 @@ public class NewJFrame111 extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String appointmentId = jComboBox3.getItemAt(jComboBox3.getSelectedIndex());
+        Appointment appointment = null;
+        for(Appointment apo: this.appointments){
+            if (apo.getId().equals(appointmentId)) {
+                appointment = apo;
+            }
+        }
+        appointment.getDatetime().with(LocalTime.of(Integer.parseInt(jTextField13.getText().substring(0, 2)),Integer.parseInt(jTextField13.getText().substring(3))));
+        String reasonChangeTime = jTextField14.getText();
+        appointment.setReason(reasonChangeTime);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
 

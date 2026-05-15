@@ -19,6 +19,10 @@ public class Appointment {
     private Specialty specialty;
     private LocalDateTime datetime;
     private String reason;
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
     private boolean type;
     private ArrayList<Prescription> prescriptions;
     private AppointmentStatus status;

@@ -7,7 +7,7 @@ package packagee;
 import java.awt.Color;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -855,7 +855,18 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String appointDate = jTextField12.getText();
         LocalDate appointmentDate = LocalDate.of(Integer.parseInt(appointDate.substring(0, 4)), Integer.parseInt(appointDate.substring(5, 7)), Integer.parseInt(appointDate.substring(8)));
-        
+        LocalTime appointmentHour = LocalTime.of(Integer.parseInt(jTextField13.getText().substring(0, 2)), Integer.parseInt(jTextField13.getText().substring(3)));
+        LocalDateTime Finally = LocalDateTime.of(appointmentDate, appointmentHour);
+        String appointmentReason = jTextArea4.getText();
+        long docId = Long.parseLong(jComboBox5.getItemAt(jComboBox5.getSelectedIndex()));
+        Doctor doctor = null;
+        for(User use:this.users){
+            if (use.getId() == docId) {
+                doctor = (Doctor) use;
+            }
+        }
+        boolean appointmentType = (jComboBox1.getSelectedIndex() == 0 ? null : (jComboBox1.getSelectedIndex() == 2 ));
+        this.appointments.add(new Appointment(appointDate, patient, doctor, doctor.getSpecialty(), Finally, appointDate, appointmentType));
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

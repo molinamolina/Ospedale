@@ -29,6 +29,10 @@ public class Doctor extends User {
     public ArrayList<Appointment> getAppointments() {
         return appointments;
     }
+
+    public Specialty getSpecialty() {
+        return specialty;
+    }
     
     public boolean addHospitalization(Hospitalization hosp){
         return hospitalizations.add(hosp);
