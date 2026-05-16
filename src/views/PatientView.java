@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package packagee;
+package views;
 
 import java.awt.Color;
 import java.time.LocalDate;
@@ -10,13 +10,22 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import packagee.Administrator;
+import packagee.Appointment;
+import packagee.AppointmentStatus;
+import packagee.Doctor;
+import packagee.Hospitalization;
+import packagee.Patient;
+import packagee.RoomType;
+import packagee.Specialty;
+import packagee.User;
 
 /**
  *
  * @author jjlora
  * @author edangulo
  */
-public class NewJFrame1 extends javax.swing.JFrame {
+public class PatientView extends javax.swing.JFrame {
 
     private int x, y;
     private User user;
@@ -25,7 +34,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private ArrayList<Appointment> appointments;
     private ArrayList<Hospitalization> hospitalizations;
 
-    public NewJFrame1(User user,Patient patient, ArrayList<User> users, ArrayList<Appointment>appointments, ArrayList<Hospitalization> hospitalizations) {
+    public PatientView(User user,Patient patient, ArrayList<User> users, ArrayList<Appointment>appointments, ArrayList<Hospitalization> hospitalizations) {
         initComponents();
         this.user = user;
         this.users = users;

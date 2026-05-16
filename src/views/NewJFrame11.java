@@ -2,10 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package packagee;
+package views;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import packagee.Appointment;
+import packagee.Doctor;
+import packagee.Hospitalization;
+import packagee.Patient;
+import packagee.Specialty;
+import packagee.User;
 
 /**
  *
