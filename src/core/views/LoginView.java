@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import javax.swing.UIManager;
-import packagee.Appointment;
+import core.models.entities.Appointment;
 import core.models.entities.Hospitalization;
 import core.models.entities.User;
 

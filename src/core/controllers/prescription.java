@@ -4,6 +4,8 @@
  */
 package packagee;
 
+import core.models.entities.Appointment;
+
 /**
  *
  * @author jjlora

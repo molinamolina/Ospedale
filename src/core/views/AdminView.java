@@ -6,11 +6,11 @@ package core.views;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import packagee.Appointment;
+import core.models.entities.Appointment;
 import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
 import core.models.entities.Patient;
-import packagee.Specialty;
+import core.models.entities.Specialty;
 import core.models.entities.User;
 
 /**
