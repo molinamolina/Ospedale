@@ -4,6 +4,9 @@
  */
 package packagee;
 
+import core.models.enums.AppointmentStatus;
+import core.models.entities.Patient;
+import core.models.entities.Doctor;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 

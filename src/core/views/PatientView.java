@@ -10,15 +10,15 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
-import packagee.Administrator;
+import core.models.entities.Administrator;
 import packagee.Appointment;
-import packagee.AppointmentStatus;
-import packagee.Doctor;
-import packagee.Hospitalization;
-import packagee.Patient;
+import core.models.enums.AppointmentStatus;
+import core.models.entities.Doctor;
+import core.models.entities.Hospitalization;
+import core.models.entities.Patient;
 import packagee.RoomType;
 import packagee.Specialty;
-import packagee.User;
+import core.models.entities.User;
 
 /**
  *

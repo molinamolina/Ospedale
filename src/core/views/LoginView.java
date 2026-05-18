@@ -11,8 +11,8 @@ import java.time.Month;
 import java.util.ArrayList;
 import javax.swing.UIManager;
 import packagee.Appointment;
-import packagee.Hospitalization;
-import packagee.User;
+import core.models.entities.Hospitalization;
+import core.models.entities.User;
 
 /**
  *

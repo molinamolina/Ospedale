@@ -7,11 +7,11 @@ package core.views;
 import java.awt.Color;
 import java.util.ArrayList;
 import packagee.Appointment;
-import packagee.Doctor;
-import packagee.Hospitalization;
-import packagee.Patient;
+import core.models.entities.Doctor;
+import core.models.entities.Hospitalization;
+import core.models.entities.Patient;
 import packagee.Specialty;
-import packagee.User;
+import core.models.entities.User;
 
 /**
  *
