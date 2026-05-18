@@ -19,14 +19,14 @@ import packagee.User;
  * @author jjlora
  * @author edangulo
  */
-public class Login extends javax.swing.JFrame {
+public class LoginView extends javax.swing.JFrame {
 
     private int x, y;
     private ArrayList<User> users;
     private ArrayList<Hospitalization> hospitalizations;
     private ArrayList<Appointment> appointments;
 
-    public Login() {
+    public LoginView() {
         initComponents();
         this.setBackground(new Color(0, 0, 0, 0));
         this.setLocationRelativeTo(null);
@@ -424,12 +424,12 @@ public class Login extends javax.swing.JFrame {
                 selectedUser = user;
                 if (selectedUser.getPassword().equals(jTextField2.getText())) {
                     if (selectedUser instanceof Administrator ) {
-                        NewJFrame11 admin = new NewJFrame11(selectedUser,users,hospitalizations, appointments);
+                        AdminView admin = new AdminView(selectedUser,users,hospitalizations, appointments);
                         this.setVisible(false);
                         admin.setVisible(true);
                     }
-                    else if (selectedUser instanceof Doctor ) {
-                        NewJFrame111 doctor = new NewJFrame111(selectedUser,(Doctor)selectedUser,users,hospitalizations,appointments);
+                    else if (selectedUser instanceof DoctorView ) {
+                        NewJFrame111 doctor = new NewJFrame111(selectedUser,(DoctorView)selectedUser,users,hospitalizations,appointments);
                         this.setVisible(false);
                         doctor.setVisible(true);
                     }

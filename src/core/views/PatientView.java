@@ -829,7 +829,7 @@ public class PatientView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        NewJFrame11 admin = new NewJFrame11(user, users,hospitalizations, appointments);
+        AdminView admin = new AdminView(user, users,hospitalizations, appointments);
         this.setVisible(false);
         admin.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
