@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/controllers/Administrator.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/views/NewJFrame11.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/controllers/prescription.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/controllers/Appointment.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/views/Login.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/views/Doctor.java</file>
-            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/views/PatientView.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/Main.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/Administrator.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/views/Doctor.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/views/NewJFrame11.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/views/PatientView.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/Appointment.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/views/Login.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/prescription.java</file>
         </group>
     </open-files>
 </project-private>
