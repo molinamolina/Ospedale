@@ -5,6 +5,7 @@
 package core.views;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import core.models.entities.Administrator;
 import java.awt.Color;
 import java.time.LocalDate;
 import java.time.Month;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import javax.swing.UIManager;
 import core.models.entities.Appointment;
 import core.models.entities.Hospitalization;
+import core.models.entities.Patient;
 import core.models.entities.User;
 
 /**
