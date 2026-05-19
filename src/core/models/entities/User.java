@@ -10,7 +10,7 @@ package core.models.entities;
  */
 public abstract class User {
     
-    protected final long id;
+    public final long id;
     protected String username;
 
     public void setUsername(String username) {

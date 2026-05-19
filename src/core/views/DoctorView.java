@@ -16,8 +16,8 @@ import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
 import core.models.enums.HospitalizationStatus;
 import core.models.entities.Patient;
-import packagee.Prescription;
-import packagee.RoomType;
+import core.controllers.Prescription;
+import core.controllers.RoomType;
 import core.models.entities.Specialty;
 import core.models.entities.User;
 
@@ -1166,7 +1166,7 @@ public class DoctorView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        NewJFrame login = new NewJFrame();
+        LoginView login = new LoginView();
         this.setVisible(false);
         login.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed

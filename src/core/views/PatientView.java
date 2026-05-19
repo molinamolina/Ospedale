@@ -16,7 +16,7 @@ import core.models.enums.AppointmentStatus;
 import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
 import core.models.entities.Patient;
-import packagee.RoomType;
+import core.controllers.RoomType;
 import core.models.entities.Specialty;
 import core.models.entities.User;
 
@@ -823,7 +823,7 @@ public class PatientView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        NewJFrame login = new NewJFrame();
+        LoginView login = new LoginView();
         this.setVisible(false);
         login.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
