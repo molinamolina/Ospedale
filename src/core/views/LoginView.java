@@ -12,6 +12,7 @@ import java.time.Month;
 import java.util.ArrayList;
 import javax.swing.UIManager;
 import core.models.entities.Appointment;
+import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
 import core.models.entities.Patient;
 import core.models.entities.User;
@@ -430,13 +431,13 @@ public class LoginView extends javax.swing.JFrame {
                         this.setVisible(false);
                         admin.setVisible(true);
                     }
-                    else if (selectedUser instanceof DoctorView ) {
-                        NewJFrame111 doctor = new NewJFrame111(selectedUser,(DoctorView)selectedUser,users,hospitalizations,appointments);
+                    else if (selectedUser instanceof Doctor ) {
+                        DoctorView doctor = new DoctorView(selectedUser,(Doctor)selectedUser,users,hospitalizations,appointments);
                         this.setVisible(false);
                         doctor.setVisible(true);
                     }
                     else {
-                        NewJFrame1 patient = new NewJFrame1(selectedUser,(Patient) selectedUser,users,appointments, hospitalizations);
+                        PatientView patient = new PatientView(selectedUser,(Patient) selectedUser,users,appointments, hospitalizations);
                         this.setVisible(false);
                         patient.setVisible(true);
                     }
