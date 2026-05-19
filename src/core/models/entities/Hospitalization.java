@@ -4,6 +4,8 @@
  */
 package core.models.entities;
 
+import core.controllers.RoomType;
+import core.models.enums.HospitalizationStatus;
 import java.time.LocalDate;
 
 /**
