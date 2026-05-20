@@ -7,9 +7,13 @@
  *
  * @author Victus
  */
+
+import core.views.*;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Not yet!");
+        LoginView mainview = new LoginView();
+        System.out.println("Starting");
+        mainview.setVisible(true);
     }
  
 }
