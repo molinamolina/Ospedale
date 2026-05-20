@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package observers.interfaces;
+package core.validators.implementations;
 
 /**
  *
  * @author Victus
  */
-public class IObserver {
+public class AppointmentValidator {
     
 }
