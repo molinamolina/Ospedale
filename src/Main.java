@@ -9,8 +9,18 @@
  */
 
 import core.views.*;
+import java.awt.Color;
+import com.formdev.flatlaf.FlatDarkLaf;
+import javax.swing.UIManager;
 public class Main {
     public static void main(String[] args) {
+        System.setProperty("flatlaf.useNativeLibrary", "false");
+
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
         LoginView mainview = new LoginView();
         System.out.println("Starting");
         mainview.setVisible(true);

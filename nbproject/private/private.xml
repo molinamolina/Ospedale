@@ -16,6 +16,22 @@
             <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/models/entities/Appointment.java</file>
             <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/models/entities/Hospitalization.java</file>
             <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/views/AdminView.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/responses/Response.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/responses/StatusCode.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/interfaces/IAuthController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/interfaces/IPatientController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/interfaces/IDoctorController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/interfaces/IAppointmentController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/interfaces/IHospitalizationController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/implementations/AuthController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/implementations/PatientController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/implementations/DoctorController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/implementations/AppointmentController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/core/controllers/implementations/HospitalizationController.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/observers/interfaces/IObserver.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/observers/interfaces/ISubject.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/observers/implementations/TableObserver.java</file>
+            <file>file:/C:/Users/Victus/Documents/NetBeansProjects/Ospedale/src/observers/implementations/DataSubject.java</file>
         </group>
     </open-files>
 </project-private>
