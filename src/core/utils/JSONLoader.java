@@ -28,9 +28,7 @@ public class JSONLoader {
             JSONArray userArray = root.getJSONArray("users");
             
             for (int i = 0; i < userArray.length(); i++ ) {
-                
-                // FILL THIS OUT
-                
+                // FILL THIS OUT 
             }
 
         } catch (Exception ex){
