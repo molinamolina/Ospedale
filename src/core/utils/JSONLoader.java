@@ -27,7 +27,11 @@ public class JSONLoader {
             JSONObject root = new JSONObject(content);
             JSONArray userArray = root.getJSONArray("users");
             
-            // FILL THIS OUT
+            for (int i = 0; i < userArray.length(); i++ ) {
+                
+                // FILL THIS OUT
+                
+            }
 
         } catch (Exception ex){
             ex.printStackTrace();
