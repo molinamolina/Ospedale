@@ -41,7 +41,7 @@ public class JSONLoader {
                 boolean gender = jsonfile.getBoolean("gender");
                 long phone = jsonfile.getLong("phone");
                 String address = jsonfile.getString("address");
-                // add specialty
+                // todo add specialty
                 String licenceNumber = jsonfile.getString("licencenumber");
                 String assignedOffice = jsonfile.getString("assignedOffice");
                 
