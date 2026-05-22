@@ -4,10 +4,13 @@
  */
 package core.validators.interfaces;
 
+import core.controllers.responses.Response;
+
 /**
  *
  * @author Victus
  */
-public interface IValidator {
-    
+public interface IValidator<T> {
+ 
+    Response validate(T object);
 }
