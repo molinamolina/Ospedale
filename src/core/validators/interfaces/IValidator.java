@@ -8,6 +8,6 @@ package core.validators.interfaces;
  *
  * @author Victus
  */
-public class IValidator {
+public interface IValidator {
     
 }

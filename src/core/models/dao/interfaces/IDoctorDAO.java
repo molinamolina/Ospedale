@@ -9,6 +9,6 @@ package core.models.dao.interfaces;
  *
  * @author Victus
  */
-public class IDoctorDAO {
+public interface IDoctorDAO {
     
 }

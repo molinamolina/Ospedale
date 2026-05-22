@@ -8,6 +8,6 @@ package core.models.dao.interfaces;
  *
  * @author Victus
  */
-public class IPatientDAO {
+public interface IPatientDAO {
     
 }

@@ -8,6 +8,6 @@ package core.controllers.interfaces;
  *
  * @author Victus
  */
-public class IAuthController {
+public interface IAuthController {
     
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @author Victus
+ * @author Asaeza07
  */
 public class AppointmentController {
      private List<Appointment> appointments;

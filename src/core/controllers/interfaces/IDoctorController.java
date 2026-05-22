@@ -8,6 +8,6 @@ package core.controllers.interfaces;
  *
  * @author Victus
  */
-public class IDoctorController {
+public interface IDoctorController {
     
 }

@@ -8,6 +8,6 @@ package core.controllers.interfaces;
  *
  * @author Victus
  */
-public class IAppointmentController {
+public interface IAppointmentController {
     
 }

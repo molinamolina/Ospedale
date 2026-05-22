@@ -8,6 +8,6 @@ package core.controllers.interfaces;
  *
  * @author Victus
  */
-public class IHospitalizationController {
+public interface IHospitalizationController {
     
 }
