@@ -17,6 +17,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import core.models.entities.*;
 
 public class JSONLoader {
 
@@ -41,10 +42,10 @@ public class JSONLoader {
                 boolean gender = jsonfile.getBoolean("gender");
                 long phone = jsonfile.getLong("phone");
                 String address = jsonfile.getString("address");
-                // todo add specialty
+                Specialty specialty = Specialty.valueOf(jsonfile.getString("specialty"));
                 String licenceNumber = jsonfile.getString("licencenumber");
                 String assignedOffice = jsonfile.getString("assignedOffice");
-                
+
                 // FILL THIS OUT!!!
             }
 
