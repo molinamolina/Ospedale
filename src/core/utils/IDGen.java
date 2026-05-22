@@ -15,7 +15,7 @@ public class IDGen {
 
     private static final Map<String, Integer> counters = new HashMap<>();
 
-    public static String GenAppID(String patientID) {
+    public static String IDGen(String patientID) {
         int count = counters.getOrDefault(patientID, 0);
         String appointmentID = String.format("A-%s-%04d", patientID, count);
         counters.put(patientID, count + 1);
