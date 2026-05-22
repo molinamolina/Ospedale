@@ -4,10 +4,13 @@
  */
 package core.controllers.interfaces;
 
+import core.controllers.responses.Response;
+
 /**
  *
  * @author Victus
  */
 public interface IAuthController {
-    
+
+    Response login(String username, String password);
 }
