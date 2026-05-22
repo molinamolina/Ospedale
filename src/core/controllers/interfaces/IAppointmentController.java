@@ -4,10 +4,16 @@
  */
 package core.controllers.interfaces;
 
+import core.controllers.responses.Response;
+import core.models.entities.Appointment;
+
 /**
  *
  * @author Victus
  */
 public interface IAppointmentController {
-    
+
+    Response crearCita(Appointment appointment);
+
+    Response obtenerCitas();
 }

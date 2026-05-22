@@ -3,41 +3,51 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package core.controllers.implementations;
+
 import core.controllers.responses.Response;
 import core.controllers.responses.StatusCode;
 import core.models.entities.Appointment;
+import core.controllers.interfaces.IAppointmentController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+
 /**
  *
  * @author Asaeza07
  */
-public class AppointmentController {
-     private List<Appointment> appointments;
+public class AppointmentController implements IAppointmentController {
+
+    private List<Appointment> appointments;
 
     public AppointmentController() {
-
         appointments = new ArrayList<>();
     }
 
-    public Response<Appointment> crearCita(Appointment appointment) {
-
+    @Override
+    public Response crearCita(Appointment appointment) {
         appointments.add(appointment);
 
-        return new Response<>(
-                StatusCode.SUCCESS,
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("appointment", appointment);
+
+        return new Response(
                 "Cita creada correctamente",
-                appointment
+                StatusCode.CREATED,
+                data
         );
     }
 
-    public Response<List<Appointment>> obtenerCitas() {
+    @Override
+    public Response obtenerCitas() {
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("appointments", appointments);
 
-        return new Response<>(
-                StatusCode.SUCCESS,
+        return new Response(
                 "Lista de citas obtenida",
-                appointments
+                StatusCode.OK,
+                data
         );
     }
 }
