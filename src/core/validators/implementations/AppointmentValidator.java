@@ -15,7 +15,7 @@ public class AppointmentValidator implements IValidator<Appointment> {
 
     @Override
     public Response validate(Appointment appointment) {
-        if (appointment.getDate() == null) {
+        if (appointment.getDate() == null) { // todo implement getDate
             return new Response("Please provide a valid date.", StatusCode.BAD_REQUEST);
         }
         return new Response("Valid", StatusCode.OK);
