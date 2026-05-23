@@ -24,7 +24,7 @@ public class Main {
             System.err.println("Failed to initialize LaF");
         }
         LoginView mainview = new LoginView();
-        System.out.println("Starting");
+        System.out.println("Starting Ospedale program...");
         mainview.setVisible(true);
     }
  
