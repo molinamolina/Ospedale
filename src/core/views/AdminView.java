@@ -61,7 +61,7 @@ public class AdminView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         licenseNum = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        assignedOffice = new javax.swing.JTextField();
+        assigned_office = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         user_name = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -171,7 +171,7 @@ public class AdminView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel9.setText("Assigned office");
 
-        assignedOffice.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+        assigned_office.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel10.setText("User");
@@ -261,7 +261,7 @@ public class AdminView extends javax.swing.JFrame {
                             .addGroup(panelRound3Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(assignedOffice, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(assigned_office, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(panelRound3Layout.createSequentialGroup()
                                     .addComponent(jLabel10)
@@ -331,7 +331,7 @@ public class AdminView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(assignedOffice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(assigned_office, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound3Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
@@ -416,12 +416,12 @@ public class AdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_closeButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        String firstname = firstname.getText();
+        String firstname = first_name.getText();
         String lastname = last_name.getText();
         long id = Long.parseLong(input_ID.getText());
         String spec = specialtyPicker.getItemAt(specialtyPicker.getSelectedIndex());
         String licenseNumber = licenseNum.getText();
-        String assignedOffice = assignedOffice.getText();
+        String assignedOffice = assigned_office.getText();
         String username = user_name.getText();
         String password = pass_word.getText();
         String comPassword = confirm_pw.getText();
@@ -465,7 +465,7 @@ public class AdminView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel adminViewTab;
-    private javax.swing.JTextField assignedOffice;
+    private javax.swing.JTextField assigned_office;
     private javax.swing.JButton closeButton;
     private javax.swing.JTextField confirm_pw;
     private javax.swing.JComboBox<String> doctorPicker;
