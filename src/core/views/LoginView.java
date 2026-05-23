@@ -69,14 +69,14 @@ public class LoginView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         phoneNum = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        emailAddress = new javax.swing.JTextField();
+        email_address = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         username_reg = new javax.swing.JTextField();
         password_reg = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         confirm_pw_reg = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        genderPicker = new javax.swing.JComboBox<>();
         saveRegButton = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         address_input = new javax.swing.JTextField();
@@ -222,7 +222,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel9.setText("Email");
 
-        emailAddress.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+        email_address.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel10.setText("User");
@@ -244,8 +244,8 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one", "Female", "Male" }));
+        genderPicker.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+        genderPicker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one", "Female", "Male" }));
 
         saveRegButton.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         saveRegButton.setText("Save");
@@ -317,7 +317,7 @@ public class LoginView extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7)
                                 .addGap(26, 26, 26)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(genderPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(address_input, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -327,7 +327,7 @@ public class LoginView extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(email_address, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -342,7 +342,7 @@ public class LoginView extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(id_number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(genderPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -354,7 +354,7 @@ public class LoginView extends javax.swing.JFrame {
                         .addComponent(phoneNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel9)
-                        .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(email_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
@@ -451,11 +451,11 @@ public class LoginView extends javax.swing.JFrame {
         String firstname = first_name.getText();
         String lastname = last_name.getText();
         long id = Long.parseLong(id_number.getText());
-        boolean gender = (jComboBox1.getSelectedIndex() == 0 ? null : (jComboBox1.getSelectedIndex() == 1 ));
+        boolean gender = (genderPicker.getSelectedIndex() == 0 ? null : (genderPicker.getSelectedIndex() == 1 ));
         String birth = birth_Date.getText();
         String address = address_input.getText();
         long phone = Long.parseLong(phoneNum.getText());
-        String email = emailAddress.getText();
+        String email = email_address.getText();
         String user = username_reg.getText();
         String password = password_reg.getText();
         String comPassword = confirm_pw_reg.getText();
@@ -493,11 +493,11 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JTextField address_input;
     private javax.swing.JTextField birth_Date;
     private javax.swing.JTextField confirm_pw_reg;
-    private javax.swing.JTextField emailAddress;
+    private javax.swing.JTextField email_address;
     private javax.swing.JButton exitButton;
     private javax.swing.JTextField first_name;
+    private javax.swing.JComboBox<String> genderPicker;
     private javax.swing.JTextField id_number;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
