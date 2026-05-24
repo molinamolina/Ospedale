@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.observers.implementations;
 
-/**
- *
- * @author Victus
- */
-public class DataSubject {
-    
+import core.observers.interfaces.IObserver;
+import core.observers.interfaces.ISubject;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DataSubject implements ISubject {
+
+    private final List<IObserver> observers = new ArrayList<>();
+
+    @Override
+    public void attach(IObserver observer) {
+        if (!observers.contains(observer)) {
+            observers.add(observer);
+        }
+    }
+
+    @Override
+    public void detach(IObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (IObserver observer : observers) {
+            observer.update();
+        }
+    }
 }
