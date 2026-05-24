@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * @author edangulo
  */
 public class Appointment {
-
+    
     private final String id;
     private Patient patient;
     private Doctor doctor;
@@ -49,6 +49,38 @@ public class Appointment {
 
     public void setFollowUp(String followUp) {
         this.followUp = followUp;
+    }
+
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public String getDiagnosis() {
+        return diagnosis;
+    }
+
+    public String getObservations() {
+        return observations;
+    }
+
+    public String getRecommendedTreatment() {
+        return recommendedTreatment;
+    }
+
+    public String getFollowUp() {
+        return followUp;
+    }
+
+    public ArrayList<Prescription> getPrescriptions() {
+        return prescriptions;
     }
 
     public Appointment(String id, Patient patient, Doctor doctor, Specialty specialty, LocalDateTime datetime, String reason, boolean type) {
@@ -98,4 +130,5 @@ public class Appointment {
     public boolean addPrescription(Prescription prescrip) {
         return this.prescriptions.add(prescrip);
     }
+    
 }

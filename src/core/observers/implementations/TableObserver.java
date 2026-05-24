@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.observers.implementations;
 
-/**
- *
- * @author Victus
- */
-public class TableObserver {
-    
+import core.observers.interfaces.IObserver;
+
+public class TableObserver implements IObserver {
+
+    private final Runnable refreshAction;
+
+    public TableObserver(Runnable refreshAction) {
+        this.refreshAction = refreshAction;
+    }
+
+    @Override
+    public void update() {
+        if (refreshAction != null) {
+            refreshAction.run();
+        }
+    }
 }
