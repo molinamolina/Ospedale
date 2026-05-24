@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.controllers.interfaces;
 
 import core.controllers.responses.Response;
-import core.models.entities.Appointment;
+import java.util.HashMap;
 
-/**
- *
- * @author Victus
- */
 public interface IAppointmentController {
-
-    Response crearCita(Appointment appointment);
-
-    Response obtenerCitas();
+    Response requestAppointment(HashMap<String, String> data);
+    Response acceptAppointment(HashMap<String, String> data);
+    Response completeAppointment(HashMap<String, String> data);
+    Response cancelAppointment(HashMap<String, String> data);
+    Response rescheduleAppointment(HashMap<String, String> data);
+    Response prescribeMedications(HashMap<String, String> data);
+    Response getPatientAppointments(long patientId);
+    Response getDoctorAppointments(long doctorId, boolean pendingOnly);
+    Response getPatientAppointmentsTable(long patientId);
 }
