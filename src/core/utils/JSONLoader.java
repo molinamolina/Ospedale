@@ -36,17 +36,35 @@ public class JSONLoader {
                 String username = jsonfile.getString("username");
                 String firstname = jsonfile.getString("firstname");
                 String lastname = jsonfile.getString("lastname");
-                String pass = jsonfile.getString("password");
-                String email = jsonfile.getString("email");
-                LocalDate birthdate = LocalDate.parse(jsonfile.getString("birthdate"));
-                boolean gender = jsonfile.getBoolean("gender");
-                long phone = jsonfile.getLong("phone");
-                String address = jsonfile.getString("address");
-                Specialty specialty = Specialty.valueOf(jsonfile.getString("specialty"));
-                String licenceNumber = jsonfile.getString("licencenumber");
-                String assignedOffice = jsonfile.getString("assignedOffice");
+                String password = jsonfile.getString("password");
 
-                // FILL THIS OUT!!!
+                if (type.equals("doctor")) {
+                    String email = jsonfile.getString("email");
+                    LocalDate birthdate = LocalDate.parse(jsonfile.getString("birthdate"));
+                    boolean gender = jsonfile.getBoolean("gender");
+                    long phone = jsonfile.getLong("phone");
+                    String address = jsonfile.getString("address");
+                    Specialty specialty = Specialty.valueOf(jsonfile.getString("specialty"));
+                    String licenceNumber = jsonfile.getString("licenceNumber");
+                    String assignedOffice = jsonfile.getString("assignedOffice");
+
+                    Doctor doctor = new Doctor(id, username, firstname, lastname, password, specialty, licenceNumber, assignedOffice);
+                    storage.getUsers().add(doctor);
+
+                } else if (type.equals("patient")) {
+                    String email = jsonfile.getString("email");
+                    LocalDate birthdate = LocalDate.parse(jsonfile.getString("birthdate"));
+                    boolean gender = jsonfile.getBoolean("gender");
+                    long phone = jsonfile.getLong("phone");
+                    String address = jsonfile.getString("address");
+
+                    Patient patient = new Patient(id, username, firstname, lastname, password, email, birthdate, gender, phone, address);
+                    storage.getUsers().add(patient);
+
+                } else if (type.equals("admin")) {
+                    Administrator admin = new Administrator(id, username, firstname, lastname, password);
+                    storage.getUsers().add(admin);
+                }
             }
 
         } catch (Exception ex) {
