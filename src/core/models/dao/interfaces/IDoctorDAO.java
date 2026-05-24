@@ -1,14 +1,12 @@
 package core.models.dao.interfaces;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import core.models.entities.Doctor;
+import core.models.entities.Specialty;
+import java.util.List;
 
-/**
- *
- * @author Victus
- */
 public interface IDoctorDAO {
-    
+    void save(Doctor doctor);
+    Doctor findById(long id);
+    List<Doctor> findAll();
+    List<Doctor> findBySpecialty(Specialty specialty);
 }
