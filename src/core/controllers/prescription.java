@@ -19,6 +19,30 @@ public class Prescription {
     private String additionalInstructions;
     private int frecuency;
 
+    public String getMedicationName() {
+        return medicationName;
+    }
+
+    public double getDose() {
+        return dose;
+    }
+
+    public String getAdministrationRoute() {
+        return administrationRoute;
+    }
+
+    public int getTreatmentDuration() {
+        return treatmentDuration;
+    }
+
+    public String getAdditionalInstructions() {
+        return additionalInstructions;
+    }
+
+    public int getFrequency() {
+        return frecuency;
+    }
+
     public Prescription(Appointment appointment, String medicationName, double dose, String administrationRoute, int treatmentDuration, String additionalInstructions, int frecuency) {
         this.appointment = appointment;
         appointment.addPrescription(this);
@@ -29,7 +53,4 @@ public class Prescription {
         this.additionalInstructions = additionalInstructions;
         this.frecuency = frecuency;
     }
-    
-    
-    
 }
