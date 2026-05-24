@@ -1,44 +1,39 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.controllers.implementations;
 
 import core.controllers.interfaces.IAuthController;
 import core.controllers.responses.Response;
 import core.controllers.responses.StatusCode;
-
+import core.models.dao.interfaces.IUserDAO;
+import core.models.entities.Administrator;
+import core.models.entities.Doctor;
+import core.models.entities.Patient;
+import core.models.entities.User;
+import core.utils.EntitySerializer;
 import java.util.HashMap;
-import java.util.List;
 
-/**
- *
- * @author Victus
- */
 public class AuthController implements IAuthController {
 
-    private final List<HashMap<String, String>> users;
+    private final IUserDAO userDAO;
 
-    public AuthController(List<HashMap<String, String>> users) {
-        this.users = users;
+    public AuthController(IUserDAO userDAO) {
+        this.userDAO = userDAO;
     }
 
     @Override
     public Response login(String username, String password) {
-        for (HashMap<String, String> user : users) {
-            if (user.get("username").equals(username) && user.get("password").equals(password)) {
-                HashMap<String, Object> data = new HashMap<>();
-                data.put("username", username);
-                return new Response(
-                        "Successfully logged in.",
-                        StatusCode.OK,
-                        data
-                );
-            }
+        User user = userDAO.findByUsername(username);
+        if (user == null || !user.getPassword().equals(password)) {
+            return new Response("Bad or nonexistent credentials.", StatusCode.BAD_REQUEST);
         }
-        return new Response(
-                "Bad or nonexistant credentials",
-                StatusCode.BAD_REQUEST
-        );
+
+        HashMap<String, Object> data = EntitySerializer.serializeUser(user);
+        if (user instanceof Administrator) {
+            data.put("role", "admin");
+        } else if (user instanceof Doctor) {
+            data.put("role", "doctor");
+        } else if (user instanceof Patient) {
+            data.put("role", "patient");
+        }
+        return new Response("Successfully logged in.", StatusCode.OK, data);
     }
 }
