@@ -1,40 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.validators.implementations;
 
 import core.controllers.responses.Response;
+import core.controllers.responses.StatusCode;
+import core.utils.DateTimeManager;
+import core.validators.interfaces.IValidator;
 
-/**
- *
- * @author Victus
- */
-public class DateTimeValidator<T> extends Validator<T> {
+public class DateTimeValidator implements IValidator<String> {
 
-    // Date: YYYY-MM-DD
-    public static boolean isValidDate(String date) {
-        if (date == null) return false;
-        if (!date.matches("\\d{4}-\\d{2}-\\d{2}")) return false;
-        String[] parts = date.split("-");
-        int month = Integer.parseInt(parts[1]);
-        int day   = Integer.parseInt(parts[2]);
-        return month >= 1 && month <= 12 && day >= 1 && day <= 31;
-    }
+    private final boolean validateTime;
 
-    // Time 24h with quarter minutes: hh:mm where mm ∈ {00,15,30,45}
-    public static boolean isValidTime(String time) {
-        if (time == null) return false;
-        if (!time.matches("\\d{2}:\\d{2}")) return false;
-        String[] parts = time.split(":");
-        int hour   = Integer.parseInt(parts[0]);
-        int minute = Integer.parseInt(parts[1]);
-        return hour >= 0 && hour <= 23
-            && (minute == 0 || minute == 15 || minute == 30 || minute == 45);
+    public DateTimeValidator(boolean validateTime) {
+        this.validateTime = validateTime;
     }
 
     @Override
-    public Response validate(T object) {
-        return null;
+    public Response validate(String value) {
+        if (value == null || value.isBlank()) {
+            return new Response("Date/time value is required.", StatusCode.BAD_REQUEST);
+        }
+        if (!DateTimeManager.isValidDate(value)) {
+            return new Response("Invalid date format. Use yyyy-MM-dd.", StatusCode.BAD_REQUEST);
+        }
+        if (validateTime && !DateTimeManager.isValidTime(value)) {
+            return new Response("Invalid time format. Use HH:mm with minutes in 00, 15, 30 or 45.", StatusCode.BAD_REQUEST);
+        }
+        return new Response("Valid date/time.", StatusCode.OK);
     }
 }

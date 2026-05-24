@@ -1,39 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.validators.implementations;
 
 import core.controllers.responses.Response;
 import core.controllers.responses.StatusCode;
-import core.models.entities.Doctor;
+import core.models.dao.interfaces.IUserDAO;
+import core.utils.SpecialtyMapper;
+import core.validators.interfaces.IValidator;
+import java.util.HashMap;
+import java.util.regex.Pattern;
 
-/**
- *
- * @author Victus
- */
-public class DoctorValidator extends UserValidator<Doctor> {
+public class DoctorValidator implements IValidator<HashMap<String, String>> {
 
-    // License: L-XXXXXXXXXX MTL
-    public static boolean isValidLicense(String license) {
-        if (license == null) return false;
-        return license.matches("L-\\d{10} MTL");
-    }
+    private static final Pattern LICENCE_PATTERN = Pattern.compile("^L-\\d{10} MTL$");
+    private static final Pattern OFFICE_PATTERN = Pattern.compile("^O-\\d{3}$");
+    private final IUserDAO userDAO;
+    private final boolean isUpdate;
 
-    // Office: O-XXX (3 dígitos)
-    public static boolean isValidOffice(String office) {
-        if (office == null) return false;
-        return office.matches("O-\\d{3}");
+    public DoctorValidator(IUserDAO userDAO, boolean isUpdate) {
+        this.userDAO = userDAO;
+        this.isUpdate = isUpdate;
     }
 
     @Override
-    public Response validate(Doctor doctor) {
-        if (doctor.getId() == 0)
-            return new Response("Please provide a valid ID.", StatusCode.BAD_REQUEST);
-        if (!isValidLicense(doctor.getLicenceNumber()))
-            return new Response("Please provide a valid licence number.", StatusCode.BAD_REQUEST);
-        if (!isValidOffice(doctor.getAssignedOffice()))
-            return new Response("Please provide a valid office.", StatusCode.BAD_REQUEST);
-        return new Response("Valid", StatusCode.OK);
+    public Response validate(HashMap<String, String> data) {
+        Response userValidation = new UserValidator(userDAO, isUpdate).validate(data);
+        if (userValidation.getStatus() != StatusCode.OK) {
+            return userValidation;
+        }
+        if (data.get("licenceNumber") == null || !LICENCE_PATTERN.matcher(data.get("licenceNumber")).matches()) {
+            return new Response("Licence number must follow L-XXXXXXXXXX MTL.", StatusCode.BAD_REQUEST);
+        }
+        if (data.get("assignedOffice") == null || !OFFICE_PATTERN.matcher(data.get("assignedOffice")).matches()) {
+            return new Response("Assigned office must follow O-XXX.", StatusCode.BAD_REQUEST);
+        }
+        try {
+            SpecialtyMapper.fromDisplayName(data.get("specialty"));
+        } catch (Exception ex) {
+            return new Response("Invalid specialty.", StatusCode.BAD_REQUEST);
+        }
+        if (data.get("firstname") == null || data.get("firstname").isBlank()
+                || data.get("lastname") == null || data.get("lastname").isBlank()) {
+            return new Response("All doctor fields are required.", StatusCode.BAD_REQUEST);
+        }
+        return new Response("Valid doctor data.", StatusCode.OK);
     }
 }
