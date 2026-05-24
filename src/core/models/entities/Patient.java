@@ -41,6 +41,14 @@ public class Patient extends User {
         this.address = address;
     }
 
+    public long getPhone() {
+        return phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public void setHospitalization(Hospitalization hospitalization) {
         this.hospitalization = hospitalization;
     }

@@ -33,6 +33,14 @@ public class Doctor extends User {
     public Specialty getSpecialty() {
         return specialty;
     }
+
+    public String getLicenceNumber() {
+        return licenceNumber;
+    }
+
+    public String getAssignedOffice() {
+        return assignedOffice;
+    }
     
     public boolean addHospitalization(Hospitalization hosp){
         return hospitalizations.add(hosp);
