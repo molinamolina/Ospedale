@@ -1,23 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package core.validators.implementations;
+
 import core.controllers.responses.Response;
 import core.controllers.responses.StatusCode;
 import core.models.entities.Appointment;
-import core.validators.interfaces.*; // even though there's literally only one file in there...
-/**
- *
- * @author Victus
- */
+import core.utils.DateTimeManager;
+import core.validators.interfaces.IValidator;
+
 public class AppointmentValidator implements IValidator<Appointment> {
 
     @Override
     public Response validate(Appointment appointment) {
-        if (appointment.getDate() == null) { // todo implement getDate
-            return new Response("Please provide a valid date.", StatusCode.BAD_REQUEST);
+        if (appointment == null) {
+            return new Response("Appointment is required.", StatusCode.BAD_REQUEST);
         }
-        return new Response("Valid", StatusCode.OK);
+        String date = appointment.getDatetime().toLocalDate().toString();
+        String time = appointment.getDatetime().toLocalTime().toString().substring(0, 5);
+        if (!DateTimeManager.isValidDate(date) || !DateTimeManager.isValidTime(time)) {
+            return new Response("Invalid appointment date or time.", StatusCode.BAD_REQUEST);
+        }
+        return new Response("Valid appointment.", StatusCode.OK);
     }
 }
