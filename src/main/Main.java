@@ -1,20 +1,12 @@
 package main;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Victus
- */
-
-import core.views.*;
-import java.awt.Color;
+import core.ApplicationContext;
+import core.views.LoginView;
 import com.formdev.flatlaf.FlatDarkLaf;
 import javax.swing.UIManager;
+
 public class Main {
+
     public static void main(String[] args) {
         System.setProperty("flatlaf.useNativeLibrary", "false");
 
@@ -23,9 +15,9 @@ public class Main {
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
+
+        ApplicationContext.getInstance();
         LoginView mainview = new LoginView();
-        System.out.println("Starting Ospedale program...");
         mainview.setVisible(true);
     }
- 
 }
