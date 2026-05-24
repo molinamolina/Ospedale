@@ -13,7 +13,6 @@ import core.models.entities.Appointment;
 import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
 import core.models.entities.Patient;
-import core.models.enums.AppointmentStatus;
 import core.models.enums.HospitalizationStatus;
 import core.utils.DateTimeManager;
 import core.utils.EntitySerializer;
