@@ -1,6 +1,6 @@
 package core.controllers.implementations;
 
-import core.controllers.RoomType;
+import core.models.enums.RoomType;
 import core.controllers.interfaces.IAppointmentController;
 import core.controllers.interfaces.IHospitalizationController;
 import core.controllers.responses.Response;

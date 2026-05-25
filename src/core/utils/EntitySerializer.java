@@ -1,7 +1,7 @@
 package core.utils;
 
 import core.models.entities.Prescription;
-import core.controllers.RoomType;
+import core.models.enums.RoomType;
 import core.models.entities.Appointment;
 import core.models.entities.Doctor;
 import core.models.entities.Hospitalization;
