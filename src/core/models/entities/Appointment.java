@@ -4,7 +4,6 @@
  */
 package core.models.entities;
 
-import core.controllers.Prescription;
 import core.models.enums.AppointmentStatus;
 import core.models.entities.Patient;
 import core.models.entities.Doctor;

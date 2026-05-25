@@ -1,6 +1,6 @@
 package core.models.dao.implementations;
 
-import core.controllers.Prescription;
+import core.models.entities.Prescription;
 import core.models.dao.interfaces.IAppointmentDAO;
 import core.models.dao.interfaces.IMedicationDAO;
 import core.models.entities.Appointment;

@@ -1,6 +1,6 @@
 package core.models.dao.interfaces;
 
-import core.controllers.Prescription;
+import core.models.entities.Prescription;
 import java.util.List;
 
 public interface IMedicationDAO {

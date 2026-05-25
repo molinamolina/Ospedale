@@ -1,6 +1,6 @@
 package core.controllers.implementations;
 
-import core.controllers.Prescription;
+import core.models.entities.Prescription;
 import core.controllers.interfaces.IAppointmentController;
 import core.controllers.responses.Response;
 import core.controllers.responses.StatusCode;

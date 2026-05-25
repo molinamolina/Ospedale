@@ -1,6 +1,6 @@
 package core.utils;
 
-import core.controllers.Prescription;
+import core.models.entities.Prescription;
 import core.controllers.RoomType;
 import core.models.entities.Appointment;
 import core.models.entities.Doctor;
