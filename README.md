@@ -19,5 +19,5 @@ Permite gestionar usuarios (doctores/pacientes), hospitalizaciones, citas, trata
 2. Implementación de patrón observador (cada cambio en los modelos se verá reflejado automáticamente)
 
 ## ¿Cómo ejecutarlo?
-Clonar el repositorio y abrirlo como proyecto en Apache NetBeans (versión 21 o superior). 
-Se requiere tener instalado una distribución del JDK (Java Development Kit) con versión 21 o superior.
+Clonar el repositorio y abrirlo como proyecto en Apache NetBeans (versión 21 o superior, desarrollado principalmente con las versiones 29/30). 
+Se requiere tener instalado una distribución del JDK (Java Development Kit) con versión 21 o superior (testeado con la versión 26).
