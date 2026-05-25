@@ -11,6 +11,6 @@ import core.controllers.responses.Response;
  * @author Victus
  */
 public interface IValidator<T> {
- 
-    Response validate(T object); // HAS to be generic, otherwise everything breaks and I'm NOT redoing any of it.
+    // Both the interface itself and response HAVE to be generic, otherwise everything breaks and I'm NOT redoing any of it.
+    Response validate(T object); 
 }
