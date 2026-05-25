@@ -14,6 +14,6 @@ public enum RoomType {
     ICU,            // Intensive Care Unit
     NICU,           // Neonatal Intensive Care Unit
     IMC,            // Intermediate Care Unit
-    ISOLATION
+    ISOLATION       // Isolation Unit
     
 }

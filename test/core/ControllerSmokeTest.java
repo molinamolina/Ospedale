@@ -1,4 +1,4 @@
-package core.tests;
+package core;
 
 import core.ApplicationContext;
 import core.controllers.responses.Response;

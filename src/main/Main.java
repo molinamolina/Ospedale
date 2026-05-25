@@ -17,7 +17,7 @@ public class Main {
         }
 
         ApplicationContext.getInstance();
-        LoginView mainview = new LoginView();
-        mainview.setVisible(true);
+        LoginView mainView = new LoginView();
+        mainView.setVisible(true);
     }
 }
