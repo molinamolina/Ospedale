@@ -12,5 +12,5 @@ import core.controllers.responses.Response;
  */
 public interface IValidator<T> {
  
-    Response validate(T object);
+    Response validate(T object); // HAS to be generic, otherwise everything breaks and I'm NOT redoing any of it.
 }
